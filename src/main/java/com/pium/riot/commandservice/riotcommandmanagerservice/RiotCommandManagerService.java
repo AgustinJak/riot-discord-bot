@@ -40,12 +40,18 @@ public class RiotCommandManagerService extends ListenerAdapter {
 
     private static final String TARGET_USER_ID = "816740476278931536";
     private static final String TARGET_IMAGE = "https://i.imgur.com/aCKJ7EA.png";
+    private static final long COOLDOWN_MS = 10 * 60 * 1000;
+    private long lastReplyTime = 0;
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         if (event.getAuthor().isBot()) return;
         if (event.getAuthor().getId().equals(TARGET_USER_ID)) {
-            event.getMessage().reply(TARGET_IMAGE).queue();
+            long now = System.currentTimeMillis();
+            if (now - lastReplyTime >= COOLDOWN_MS) {
+                lastReplyTime = now;
+                event.getMessage().reply(TARGET_IMAGE).queue();
+            }
         }
     }
 
