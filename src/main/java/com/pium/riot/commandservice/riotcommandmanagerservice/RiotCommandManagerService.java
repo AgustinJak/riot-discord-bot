@@ -33,9 +33,9 @@ public class RiotCommandManagerService extends ListenerAdapter {
             .withEmoji(Emoji.fromUnicode("☕"));
 
     public RiotCommandManagerService() {
-        addCommand("profile", new Profile());
+        addCommand("lol", new Profile());
         addCommand("tft", new TftCommand());
-        addCommand("val", new ValCommand());
+        addCommand("valorant", new ValCommand());
     }
 
     private void addCommand(String name, RiotBotCommand command) {

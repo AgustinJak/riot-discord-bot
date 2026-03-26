@@ -15,7 +15,7 @@ public class CommandRegisterService {
 
     public void registerCommands() {
         api.getGuilds().forEach(guild -> guild.updateCommands().addCommands(
-                Commands.slash("profile", "Muestra tu perfil de League of Legends")
+                Commands.slash("lol", "Muestra tu perfil de League of Legends")
                         .addOption(OptionType.STRING, "nick", "Ingresa tu RiotUser", true)
                         .addOption(OptionType.STRING, "tag", "Ingresa tu tag sin el #", true)
                         .addOptions(RegionConfig.getRegionOptions()),
@@ -23,7 +23,7 @@ public class CommandRegisterService {
                         .addOption(OptionType.STRING, "nick", "Ingresa tu RiotUser", true)
                         .addOption(OptionType.STRING, "tag", "Ingresa tu tag sin el #", true)
                         .addOptions(RegionConfig.getRegionOptions()),
-                Commands.slash("val", "Muestra tu perfil de Valorant")
+                Commands.slash("valorant", "Muestra tu perfil de Valorant")
                         .addOption(OptionType.STRING, "nick", "Ingresa tu RiotUser", true)
                         .addOption(OptionType.STRING, "tag", "Ingresa tu tag sin el #", true)
                         .addOptions(ValRegionConfig.getRegionOptions())

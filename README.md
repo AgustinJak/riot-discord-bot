@@ -1,4 +1,38 @@
-PiumBot es un bot de discord el cual consume la api de RiotGames con la cual obtengo datos de las cuentas del juego League of legends, como su nivel, puntos, partidas y demás la principal función es poder ingresar tu nombre de usuario del juego
-a través de un comando en discord y así obtener información actualizada de tu cuenta de lol en cualquier server de discord en el que piumbot este.
+# PiumBot
 
-![image](https://github.com/user-attachments/assets/d54cac60-2b50-4a8f-af37-1b3f7281497a)
+Bot de Discord que consume las APIs de Riot Games y Henrik Dev para obtener estadísticas de tus cuentas de **League of Legends**, **Valorant** y **Teamfight Tactics**.
+
+## Comandos
+
+| Comando | Descripción |
+|---------|-------------|
+| `/lol` | Perfil ranked de LoL (Solo Q, Flex, Historial de partidas) |
+| `/valorant` | Perfil ranked de Valorant con historial de partidas |
+| `/tft` | Perfil ranked de Teamfight Tactics |
+
+## Funcionalidades
+
+- Rank cards generadas con Java2D (imágenes PNG)
+- Historial de partidas con iconos de agentes y mapas
+- Botones interactivos para cambiar entre vistas (Solo Q / Flex / Historial)
+- Splash arts de campeones y mapas como fondo de las cartas
+- Barra de progreso de LP/RR
+
+## Valorant
+
+![Valorant Profile](https://i.imgur.com/2U6wLeD.png)
+
+## League of Legends
+
+![LoL Profile](https://i.imgur.com/aCKJ7EA.png)
+
+## Tecnologías
+
+- Java 21
+- JDA 5.3.0 (Java Discord API)
+- Riot Games API
+- Henrik Dev API (Valorant)
+- Maven
+- Java2D (Graphics2D)
+- Docker
+- Railway (hosting)
