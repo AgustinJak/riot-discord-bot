@@ -1,15 +1,11 @@
 package com.pium.riot.botservice.config.utils;
 
-import lombok.Getter;
-
-
 import java.util.Map;
 import java.util.Set;
 
-@Getter
-public final class Region {
+public final class ValRegion {
 
-    private Region() {
+    private ValRegion() {
     }
 
     public static final String LAS = "LAS";
@@ -21,26 +17,19 @@ public final class Region {
     public static final String JP = "JP";
     public static final String SEA = "SEA";
 
-    private static final Map<String, String> REGION_API_VALUES;
-    static {
-
-        REGION_API_VALUES = Map.of(
-                LAS, "americas:la2",
-                LAN, "americas:la1",
-                BR, "americas:br1",
-                NA, "americas:na1",
-                EUW, "europe:euw1",
-                KR, "asia:kr",
-                JP, "asia:jp1",
-                SEA, "sea:ph2");
-    }
+    private static final Map<String, String> REGION_API_VALUES = Map.of(
+            LAS, "latam",
+            LAN, "latam",
+            BR, "br",
+            NA, "na",
+            EUW, "eu",
+            KR, "kr",
+            JP, "ap",
+            SEA, "ap"
+    );
 
     public static String getApiValue(String regionName) {
         return REGION_API_VALUES.get(regionName.toUpperCase());
-    }
-
-    public static boolean isValid(String regionName) {
-        return REGION_API_VALUES.containsKey(regionName.toUpperCase());
     }
 
     public static Set<String> getAvailableRegions() {

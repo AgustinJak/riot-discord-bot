@@ -10,7 +10,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class BotLauncherService {
     public void start() throws InterruptedException {
-        Dotenv dotenv = Dotenv.load();
+        Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
         String token = dotenv.get("token");
 
         JDA api = JDABuilder.createDefault(token,
