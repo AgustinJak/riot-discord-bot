@@ -61,7 +61,9 @@ public class ValCommand implements RiotBotCommand {
                 Button.primary("val_profile", "Perfil").asDisabled(),
                 Button.secondary("val_history", "Historial"),
                 Button.link("https://github.com/AgustinJak/riot-discord-bot", "GitHub")
-                    .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false))
+                    .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false)),
+                Button.link("https://cafecito.app/aguspium", "Donaciones")
+                    .withEmoji(Emoji.fromUnicode("☕"))
             ).queue(message -> {
                 cardCache.put(message.getId(), profileCard);
                 if (finalHistoryCard != null) {

@@ -28,6 +28,10 @@ public class RiotCommandManagerService extends ListenerAdapter {
             "https://github.com/AgustinJak/riot-discord-bot", "GitHub")
             .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false));
 
+    private static final Button DONATE_BUTTON = Button.link(
+            "https://cafecito.app/aguspium", "Donaciones")
+            .withEmoji(Emoji.fromUnicode("☕"));
+
     public RiotCommandManagerService() {
         addCommand("profile", new Profile());
         addCommand("tft", new TftCommand());
@@ -50,7 +54,9 @@ public class RiotCommandManagerService extends ListenerAdapter {
             long now = System.currentTimeMillis();
             if (now - lastReplyTime >= COOLDOWN_MS) {
                 lastReplyTime = now;
-                event.getMessage().reply(TARGET_IMAGE).queue();
+                event.getMessage().reply(TARGET_IMAGE)
+                    .addActionRow(DONATE_BUTTON)
+                    .queue();
             }
         }
     }
@@ -101,7 +107,8 @@ public class RiotCommandManagerService extends ListenerAdapter {
             Button.primary("lol_soloq", "Solo Q").withDisabled(index == 0),
             Button.secondary("lol_flex", "Flex").withDisabled(index == 1),
             Button.secondary("lol_history", "Historial"),
-            GITHUB_BUTTON
+            GITHUB_BUTTON,
+            DONATE_BUTTON
         ).queue();
     }
 
@@ -114,7 +121,8 @@ public class RiotCommandManagerService extends ListenerAdapter {
             Button.secondary("lol_soloq", "Solo Q"),
             Button.secondary("lol_flex", "Flex"),
             Button.primary("lol_history", "Historial").asDisabled(),
-            GITHUB_BUTTON
+            GITHUB_BUTTON,
+            DONATE_BUTTON
         ).queue();
     }
 
@@ -128,7 +136,8 @@ public class RiotCommandManagerService extends ListenerAdapter {
         ).setActionRow(
             Button.secondary("val_profile", "Perfil"),
             Button.primary("val_history", "Historial").asDisabled(),
-            GITHUB_BUTTON
+            GITHUB_BUTTON,
+            DONATE_BUTTON
         ).queue();
     }
 
@@ -142,7 +151,8 @@ public class RiotCommandManagerService extends ListenerAdapter {
         ).setActionRow(
             Button.primary("val_profile", "Perfil").asDisabled(),
             Button.secondary("val_history", "Historial"),
-            GITHUB_BUTTON
+            GITHUB_BUTTON,
+            DONATE_BUTTON
         ).queue();
     }
 }

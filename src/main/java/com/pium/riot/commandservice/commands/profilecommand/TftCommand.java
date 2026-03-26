@@ -51,7 +51,9 @@ public class TftCommand implements RiotBotCommand {
                 FileUpload.fromData(new ByteArrayInputStream(card), "rank_card.png")
             ).addActionRow(
                 Button.link("https://github.com/AgustinJak/riot-discord-bot", "GitHub")
-                    .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false))
+                    .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false)),
+                Button.link("https://cafecito.app/aguspium", "Donaciones")
+                    .withEmoji(Emoji.fromUnicode("☕"))
             ).queue();
         } else {
             event.getHook().sendMessage("No se encontraron datos ranked de TFT").queue();

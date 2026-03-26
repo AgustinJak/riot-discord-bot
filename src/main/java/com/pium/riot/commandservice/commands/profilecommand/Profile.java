@@ -95,7 +95,9 @@ public class Profile implements RiotBotCommand {
                 Button.secondary("lol_flex", "Flex"),
                 Button.secondary("lol_history", "Historial"),
                 Button.link("https://github.com/AgustinJak/riot-discord-bot", "GitHub")
-                    .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false))
+                    .withEmoji(Emoji.fromCustom("GitIcon", 1363525155573338212L, false)),
+                Button.link("https://cafecito.app/aguspium", "Donaciones")
+                    .withEmoji(Emoji.fromUnicode("☕"))
             ).queue(message -> {
                 cardCache.put(message.getId(), cards);
                 userCache.put(message.getId(), summonerName + "#" + tag);
