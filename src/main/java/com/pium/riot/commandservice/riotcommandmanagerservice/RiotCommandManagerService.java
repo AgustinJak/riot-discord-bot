@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import net.dv8tion.jda.api.utils.FileUpload;
@@ -35,6 +36,17 @@ public class RiotCommandManagerService extends ListenerAdapter {
 
     private void addCommand(String name, RiotBotCommand command) {
         commands.put(name, command);
+    }
+
+    private static final String TARGET_USER_ID = "386526402805235722";
+    private static final String TARGET_IMAGE = "https://i.imgur.com/aCKJ7EA.png";
+
+    @Override
+    public void onMessageReceived(MessageReceivedEvent event) {
+        if (event.getAuthor().isBot()) return;
+        if (event.getAuthor().getId().equals(TARGET_USER_ID)) {
+            event.getMessage().reply(TARGET_IMAGE).queue();
+        }
     }
 
     @Override
