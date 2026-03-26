@@ -38,7 +38,7 @@ public class RiotCommandManagerService extends ListenerAdapter {
         commands.put(name, command);
     }
 
-    private static final String TARGET_USER_ID = "386526402805235722";
+    private static final String TARGET_USER_ID = "816740476278931536";
     private static final String TARGET_IMAGE = "https://i.imgur.com/aCKJ7EA.png";
 
     @Override
