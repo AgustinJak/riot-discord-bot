@@ -39,6 +39,10 @@ Bot de Discord que consume las APIs de Riot Games y Henrik Dev para obtener esta
 - Docker
 - Railway (hosting)
 
+## Agregá el bot a tu servidor
+
+[![Invitar a PiumBot](https://img.shields.io/badge/Agregar%20a%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/oauth2/authorize?client_id=1235611442019827732)
+
 ## Donaciones
 
 Si te gusta el bot y querés apoyar el proyecto, podés invitarme un cafecito:
