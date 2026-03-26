@@ -18,13 +18,15 @@ Bot de Discord que consume las APIs de Riot Games y Henrik Dev para obtener esta
 - Splash arts de campeones y mapas como fondo de las cartas
 - Barra de progreso de LP/RR
 
-## Valorant
-
-![Valorant Profile](https://i.imgur.com/2U6wLeD.png)
-
 ## League of Legends
 
-![LoL Profile](https://i.imgur.com/aCKJ7EA.png)
+![LoL Profile](https://i.imgur.com/GKEseW5.png)
+
+## Valorant
+
+![Valorant Profile](https://i.imgur.com/mNlTqFy.png)
+
+![Valorant Match History](https://i.imgur.com/BGoeVHm.png)
 
 ## Tecnologías
 
@@ -36,3 +38,9 @@ Bot de Discord que consume las APIs de Riot Games y Henrik Dev para obtener esta
 - Java2D (Graphics2D)
 - Docker
 - Railway (hosting)
+
+## Donaciones
+
+Si te gusta el bot y querés apoyar el proyecto, podés invitarme un cafecito:
+
+[![Cafecito](https://cdn.cafecito.app/imgs/buttons/button_5.svg)](https://cafecito.app/aguspium)
