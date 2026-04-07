@@ -43,7 +43,7 @@ public class RiotCommandManagerService extends ListenerAdapter {
     }
 
     private static final String TARGET_USER_ID = "816740476278931536";
-    private static final String TARGET_IMAGE = "https://i.imgur.com/aCKJ7EA.png";
+    private static final String TARGET_IMAGE = "https://i.imgur.com/uXg5fa4.jpeg";
     private static final long COOLDOWN_MS = 10 * 60 * 1000;
     private long lastReplyTime = 0;
 
@@ -54,7 +54,7 @@ public class RiotCommandManagerService extends ListenerAdapter {
             long now = System.currentTimeMillis();
             if (now - lastReplyTime >= COOLDOWN_MS) {
                 lastReplyTime = now;
-                event.getMessage().reply(TARGET_IMAGE)
+                event.getMessage().reply("Vamos a volver\n" + TARGET_IMAGE)
                     .addActionRow(DONATE_BUTTON)
                     .queue();
             }
